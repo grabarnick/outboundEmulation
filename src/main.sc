@@ -17,10 +17,6 @@ theme: /
                 {}
             );
             log("Link: " + pushback.link) 
-        go: PutLink
-        state: PutLink
-            q:*
-            a: Link: {{pushback.link}}
 
     state: Outbound
         event!: eventName
