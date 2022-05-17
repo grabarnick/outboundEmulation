@@ -16,7 +16,9 @@ theme: /
                 "eventName",
                 {}
             );
-            log("Link: " + pushback.link) 
+            $session.link = pushback.link
+            # log("Link: " + pushback.link)
+        a: {{$session.link}}
 
     state: Outbound
         event!: eventName
