@@ -16,7 +16,7 @@ theme: /
                 "eventName",
                 {}
             );
-        a: {{$pushback.link}}
+        a: Link: 
 
     state: Outbound
         event!: eventName
