@@ -17,6 +17,7 @@ theme: /
                 {}
             );
             log("Link: " + pushback.link) 
+        go: PutLink
         state: PutLink
             a: Link: {{pushback.link}}
 
