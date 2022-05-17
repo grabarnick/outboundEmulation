@@ -20,7 +20,7 @@ theme: /
                 "eventName",
                 {}
             );
-            $session.push = "link:"+pushback.link+"sdfs"
+            $session.push = "x"+pushback.link
             # log("Link: " + pushback.link)
         a: {{$session.push}}
 
