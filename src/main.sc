@@ -20,9 +20,9 @@ theme: /
                 "eventName",
                 {}
             );
-            $session.push = pushback.link
+            $session.push = "link:"pushback.link
             # log("Link: " + pushback.link)
-        # a: Link: {{$session.push}}
+        a: {{$session.push}}
 
 
 
