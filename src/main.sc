@@ -11,7 +11,7 @@ theme: /
         a: Исходящее сообщение
         
     state: Pushback
-        intent!: /привет
+        q: link
         script:
             var pushback = $pushgate.createPushback(
                 $request.channelType,
@@ -20,9 +20,9 @@ theme: /
                 "eventName",
                 {}
             );
-            $session.push = "x"+pushback.link
+            $session.pushlink = pushback.link
             # log("Link: " + pushback.link)
-        a: {{$session.push}}
+        a: Link: {{$session.pushlink}}
 
 
 
