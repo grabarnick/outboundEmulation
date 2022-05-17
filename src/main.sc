@@ -6,13 +6,21 @@ theme: /
         q!: $regex</start>
         a: Начнём.
 
-    state: Hello
+    state: Pushback
         intent!: /привет
-        a: Привет привет
+        script:
+            var pushback = $pushgate.createPushback(
+                $request.channelType,
+                $request.botId,
+                $request.channelUserId,
+                "eventName",
+                {}
+            );
+        a: {{pushback.link}}
 
-    state: Bye
-        intent!: /пока
-        a: Пока пока
+    state: Outbound
+        event!: eventName
+        a: Исходящее сообщение
 
     state: NoMatch
         event!: noMatch
