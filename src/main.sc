@@ -5,7 +5,11 @@ theme: /
     state: Start
         q!: $regex</start>
         a: Начнём.
-
+    
+    state: Outbound
+        event!: eventName
+        a: Исходящее сообщение
+        
     state: Pushback
         intent!: /привет
         script:
@@ -18,11 +22,9 @@ theme: /
             );
             $session.push = pushback.link
             # log("Link: " + pushback.link)
-        a: Link: {{$session.push}}
+        # a: Link: {{$session.push}}
 
-    state: Outbound
-        event!: eventName
-        a: Исходящее сообщение
+
 
     state: NoMatch
         event!: noMatch
